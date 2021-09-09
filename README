@@ -1,1 +1,14 @@
+To use this converter: 
 
+Build your API
+
+Open powershell and enter the following:
+
+1. cd D:\NetToTypescript.Powershell\NetToTypescript.PowerShell.Main\NetToTypescript.PowerShell
+2. Import-Module .\bin\Debug\netstandard2.0\NetToTypescript.PowerShell.dll
+3. Get-Command -Module NetToTypescript.PowerShell
+4. ConvertTo-TypeScriptFromOpenAPI -SFP "D:\PATH\TO\YOUR\SOLUTION"
+
+The path in step 4 must be the folder which contains your API and UI project.
+
+Converted types and clients can be found in your Vue project src/api/api-client.ts.
