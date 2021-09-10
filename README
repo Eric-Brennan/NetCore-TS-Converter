@@ -1,4 +1,4 @@
-# NetCore-Ts-Converter
+NetCore-Ts-Converter
 
 To use this converter: 
 
@@ -13,8 +13,6 @@ Open powershell and enter the following:
 3. Get-Command -Module NetToTypescript.PowerShell
 
 4. ConvertTo-TypeScriptFromOpenAPI -SFP "D:\PATH\TO\YOUR\SOLUTION"
-
----
 
 The path in step 4 must be the folder which contains your API and UI project.
 
