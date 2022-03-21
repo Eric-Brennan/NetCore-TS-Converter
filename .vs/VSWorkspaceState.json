@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\NetToTypescript.PowerShell.Main",
+    "\\NetToTypescript.PowerShell.Main\\APIConverter",
+    "\\NetToTypescript.PowerShell.Main\\APIConverter\\Cmdlets",
+    "\\NetToTypescript.PowerShell.Main\\APIConverter\\obj"
+  ],
+  "SelectedNode": "\\NetToTypescript.PowerShell.Main",
+  "PreviewInSolutionExplorer": false
+}

@@ -6,14 +6,18 @@ Build your API
 
 Open powershell and enter the following:
 
-1. cd D:\NetToTypescript.Powershell\NetToTypescript.PowerShell.Main\NetToTypescript.PowerShell
+1. Set-Location "C:\Repos\Swagger-Ts-Converter\Swagger-Ts-Converter.PowerShell.Main\APIConverter"
 
-2. Import-Module .\bin\Debug\netstandard2.0\NetToTypescript.PowerShell.dll
+2. Import-Module .\bin\Debug\netstandard2.0\APIConverter.dll
 
-3. Get-Command -Module NetToTypescript.PowerShell
+3. Get-Command -Module APIConverter
 
 4. ConvertTo-TypeScriptFromOpenAPI -SFP "D:\PATH\TO\YOUR\SOLUTION"
 
-The path in step 4 must be the folder which contains your API and UI project.
+This command looks for a swagger file in the directory specified and outputs api-types.ts to the same folder.
 
-Converted types and clients can be found in your Vue project src/api/api-client.ts.
+or 
+
+4. ConvertToTS_LocalHost -Port 8080
+
+This command will read the swagger file hosted locally and output api-types.ts to the desktop

@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = APIConverter
+build_property.ProjectDir = C:\Repos\Swagger-TS-Converter\Swagger-Ts-Converter.PowerShell.Main\APIConverter\

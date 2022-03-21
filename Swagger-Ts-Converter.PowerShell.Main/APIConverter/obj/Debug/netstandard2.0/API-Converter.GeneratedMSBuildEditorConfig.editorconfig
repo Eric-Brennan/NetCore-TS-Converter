@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = API-Converter
+build_property.ProjectDir = C:\Repos\NetCore-TS-Converter\NetToTypescript.PowerShell.Main\API-Converter\
