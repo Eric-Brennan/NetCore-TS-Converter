@@ -10,7 +10,7 @@ Open powershell and enter the following:
 
 3. Get-Command -Module APIConverter
 
-4. ConvertTo-TypeScriptFromOpenAPI -SFP "D:\PATH\TO\YOUR\SWAGGER\DOC"
+4. ConvertTo-TSFromPath -Path "D:\PATH\TO\YOUR\SWAGGER\DOC"
 
 This command looks for a swagger file in the directory specified and outputs api-types.ts to the same folder.
 
