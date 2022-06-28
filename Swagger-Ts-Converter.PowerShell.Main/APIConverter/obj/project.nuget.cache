@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/IN1ucTFmMZ/vwrmI1rLmVoUHgabVB2hVU6E6AHQw+qClk2k0HvuOy4cR2t1v0vtNziyGlbfqqfpS6iyZlhHkQ==",
+  "dgSpecHash": "jMx93cho+QElup/LIsnw5XdI0dAcswaHubAg6Zd7qwDABVr/+eOOUF6wb2kdQ2llYb+PQZ66zMMZmfowefJyfw==",
   "success": true,
-  "projectFilePath": "C:\\Repos\\NetCore-TS-Converter\\NetToTypescript.PowerShell.Main\\APIConverter\\APIConverter.csproj",
+  "projectFilePath": "C:\\Repos\\Swagger-TS-Converter\\Swagger-Ts-Converter.PowerShell.Main\\APIConverter\\APIConverter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eric.Brennan\\.nuget\\packages\\dotliquid\\2.0.314\\dotliquid.2.0.314.nupkg.sha512",
     "C:\\Users\\Eric.Brennan\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",

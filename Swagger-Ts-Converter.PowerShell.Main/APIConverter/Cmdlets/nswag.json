@@ -1,0 +1,8 @@
+﻿{
+  "runtime": "NetCore31",
+  "codeGenerators": {
+    "swaggerToTypeScriptClient": {
+      "jgfgdshjhjljghfdjjlkhfhghkghffjjgfkj": "MultipleClientsFromOperationId"
+    }    
+  }
+}

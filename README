@@ -1,8 +1,6 @@
-NetCore-Ts-Converter
+Swagger-Ts-Converter
 
 To use this converter: 
-
-Build your API
 
 Open powershell and enter the following:
 
@@ -12,12 +10,12 @@ Open powershell and enter the following:
 
 3. Get-Command -Module APIConverter
 
-4. ConvertTo-TypeScriptFromOpenAPI -SFP "D:\PATH\TO\YOUR\SOLUTION"
+4. ConvertTo-TypeScriptFromOpenAPI -SFP "D:\PATH\TO\YOUR\SWAGGER\DOC"
 
 This command looks for a swagger file in the directory specified and outputs api-types.ts to the same folder.
 
 or 
 
-4. ConvertToTS_LocalHost -Port 8080
+4. ConvertTo-TsFromURL -URL "http://localhost/swagger.json"
 
-This command will read the swagger file hosted locally and output api-types.ts to the desktop
+This command will read the swagger file hosted at the specified URL and output api-types.ts to C drive

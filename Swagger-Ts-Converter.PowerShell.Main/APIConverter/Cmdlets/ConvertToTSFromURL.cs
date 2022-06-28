@@ -1,4 +1,5 @@
 ﻿using NSwag;
+using NSwag.CodeGeneration.OperationNameGenerators;
 using NSwag.CodeGeneration.TypeScript;
 using System;
 using System.IO;
@@ -14,17 +15,17 @@ namespace APIConverter
      * Set-Location "cd C:\Repos\Swagger-Ts-Converter\Swagger-Ts-Converter.PowerShell.Main\APIConverter"
      * Import-Module .\bin\Debug\netstandard2.0\APIConverter.dll
      * Get-Command -Module APIConverter
-     * ConvertTo-TS_LocalHost -Port 55031
+     * ConvertToTSFromURL -URL "http://localhost:3001/swagger.json
      */
 
     // Generates a typescript file which contains all types from the api
     // Allows close coupling of api and ui and speeds up dev process by generating complex types
-    [Cmdlet(VerbsData.ConvertTo, "TS_LocalHost")]
-    public class ConvertToTS_LocalHost : Cmdlet
+    [Cmdlet(VerbsData.ConvertTo, "TSFromURL")]
+    public class ConvertToTSFromURL : Cmdlet
     {
-        [Alias("Port, Port")]
+        [Alias("URL, URL")]
         [Parameter(Position = 0, Mandatory = true)]
-        public int Port { get; set; }
+        public string URL { get; set; }
 
         protected override void ProcessRecord()
         {
@@ -33,20 +34,20 @@ namespace APIConverter
                 using (WebClient wc = new WebClient())
                 {
                     // Get the swagger doc as string from localhost api
-                    var json = wc.DownloadString("http://localhost:" + Port + "/swagger/v1/swagger.json");
+                    var json = wc.DownloadString(URL);
 
                     // Create OpenAPI document from swagger string
                     var document = OpenApiDocument.FromJsonAsync(json);
 
                     document.Wait();
 
+                   
                     //Typescript settings for base authorisation class
                     var settings = new TypeScriptClientGeneratorSettings
                     {
                         ClientBaseClass = "ApiClientBase",
                         ConfigurationClass = "IConfig",
-                        UseTransformOptionsMethod = true,
-                        GenerateClientClasses = true
+                        OperationNameGenerator = new MultipleClientsFromFirstTagAndOperationIdGenerator()
                     };
 
                     //Add base class from embedded resource

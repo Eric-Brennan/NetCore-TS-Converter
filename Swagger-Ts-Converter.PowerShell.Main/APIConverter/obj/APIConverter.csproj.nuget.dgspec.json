@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repos\\NetCore-TS-Converter\\NetToTypescript.PowerShell.Main\\APIConverter\\APIConverter.csproj": {}
+    "C:\\Repos\\Swagger-TS-Converter\\Swagger-Ts-Converter.PowerShell.Main\\APIConverter\\APIConverter.csproj": {}
   },
   "projects": {
-    "C:\\Repos\\NetCore-TS-Converter\\NetToTypescript.PowerShell.Main\\APIConverter\\APIConverter.csproj": {
+    "C:\\Repos\\Swagger-TS-Converter\\Swagger-Ts-Converter.PowerShell.Main\\APIConverter\\APIConverter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\NetCore-TS-Converter\\NetToTypescript.PowerShell.Main\\APIConverter\\APIConverter.csproj",
+        "projectUniqueName": "C:\\Repos\\Swagger-TS-Converter\\Swagger-Ts-Converter.PowerShell.Main\\APIConverter\\APIConverter.csproj",
         "projectName": "APIConverter",
-        "projectPath": "C:\\Repos\\NetCore-TS-Converter\\NetToTypescript.PowerShell.Main\\APIConverter\\APIConverter.csproj",
+        "projectPath": "C:\\Repos\\Swagger-TS-Converter\\Swagger-Ts-Converter.PowerShell.Main\\APIConverter\\APIConverter.csproj",
         "packagesPath": "C:\\Users\\Eric.Brennan\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\NetCore-TS-Converter\\NetToTypescript.PowerShell.Main\\APIConverter\\obj\\",
+        "outputPath": "C:\\Repos\\Swagger-TS-Converter\\Swagger-Ts-Converter.PowerShell.Main\\APIConverter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Eric.Brennan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,9 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "http://nuget.carfinance247.co.uk": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/carfinance247/_packaging/cf247feed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {

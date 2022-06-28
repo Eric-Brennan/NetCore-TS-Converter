@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\NetToTypescript.PowerShell.Main",
-    "\\NetToTypescript.PowerShell.Main\\APIConverter",
-    "\\NetToTypescript.PowerShell.Main\\APIConverter\\Cmdlets",
-    "\\NetToTypescript.PowerShell.Main\\APIConverter\\obj"
+    "\\Swagger-Ts-Converter.PowerShell.Main",
+    "\\Swagger-Ts-Converter.PowerShell.Main\\APIConverter",
+    "\\Swagger-Ts-Converter.PowerShell.Main\\APIConverter\\Cmdlets"
   ],
-  "SelectedNode": "\\NetToTypescript.PowerShell.Main",
+  "SelectedNode": "\\Swagger-Ts-Converter.PowerShell.Main\\APIConverter\\Cmdlets\\ConvertToTypeScriptFromOpenAPI.cs",
   "PreviewInSolutionExplorer": false
 }

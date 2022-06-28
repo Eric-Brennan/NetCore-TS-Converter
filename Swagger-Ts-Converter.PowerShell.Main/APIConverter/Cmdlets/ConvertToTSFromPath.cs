@@ -1,4 +1,5 @@
 ﻿using NSwag;
+using NSwag.CodeGeneration.OperationNameGenerators;
 using NSwag.CodeGeneration.TypeScript;
 using System;
 using System.IO;
@@ -12,20 +13,20 @@ namespace APIConverter
     * Set-Location "C:\Repos\Swagger-Ts-Converter\Swagger-Ts-Converter.PowerShell.Main\APIConverter"
     * Import-Module .\bin\Debug\netstandard2.0\APIConverter.dll
     * Get-Command -Module APIConverter
-    * ConvertTo-TypeScriptFromOpenAPI -SFP "C:\Users\<YOUR.USERNAME>\Desktop"
+    * ConvertTo-TSFromPath -Path "C:\Users\<YOUR.USERNAME>\Desktop"
     */
 
 
-    [Cmdlet(VerbsData.ConvertTo, "TypeScriptFromOpenAPI")]
-    public class ConvertToTypeScriptFromOpenAPI : Cmdlet
+    [Cmdlet(VerbsData.ConvertTo, "TSFromPath")]
+    public class ConvertToTSFromPath : Cmdlet
     {
-        [Alias("SFP, SolutionFolderPath")]
+        [Alias("Path, Path")]
         [Parameter(Position = 0, Mandatory = true)]
-        public string SolutionFolderPath { get; set; }
+        public string Path { get; set; }
 
         protected override void ProcessRecord()
         {
-            DirectoryInfo dir = new DirectoryInfo(SolutionFolderPath);
+            DirectoryInfo dir = new DirectoryInfo(Path);
             
             //Check directory exists
             if (!dir.Exists)
@@ -53,7 +54,7 @@ namespace APIConverter
             {
                 ClientBaseClass = "ApiClientBase",
                 ConfigurationClass = "IConfig",
-                UseTransformOptionsMethod = true
+                OperationNameGenerator = new MultipleClientsFromFirstTagAndOperationIdGenerator()
             };
 
             //Add base class from embedded resource
@@ -66,7 +67,7 @@ namespace APIConverter
             //Generate code
             WriteObject("Generating code...");
 
-            var outputFilePath = SolutionFolderPath + $"\\api-types.ts";
+            var outputFilePath = Path + $"\\api-types.ts";
 
             File.WriteAllText(outputFilePath, new TypeScriptClientGenerator(document.Result, settings).GenerateFile());
 
